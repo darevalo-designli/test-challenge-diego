@@ -77,4 +77,32 @@ export class OrdersService {
     });
     return items;
   }
+
+    /**
+   * If a orderId is passed in, then we'll use it to filter the results
+   * orders
+   * @param {number} [orderId] - number - This is the orderId that we want to filter by.
+   * @returns An array of orders.
+   */
+     async findOrderById(orderId?: number) {
+      const items = await this.prisma.order.findMany({
+        where: {id: orderId},
+        include: {
+          user: {
+            select: {
+              id: true,
+              email: true,
+              firstName: true,
+              lastName: true,
+            },
+          },
+          items: {
+            include: {
+              product: true,
+            },
+          },
+        },
+      });
+      return items;
+    }
 }

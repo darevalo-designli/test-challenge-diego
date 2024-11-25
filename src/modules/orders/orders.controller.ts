@@ -1,4 +1,4 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Param, Post } from '@nestjs/common';
 import { OrdersService } from './orders.service';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CurrentUser } from '../shared/decorators/current-user.decorator';
@@ -48,5 +48,18 @@ export class OrdersController {
   })
   findAllByUserId(@CurrentUser() user: User) {
     return this.ordersService.findAll(user.id);
+  }
+
+  @Get(':id')
+  @UseRoles({
+    resource: 'order',
+    action: 'read',
+    possession: 'own',
+  })
+  @ApiOperation({
+    summary: 'find an order by id',
+  })
+  remove(@Param('id') id: string) {
+    return this.ordersService.findOrderById(+id);
   }
 }

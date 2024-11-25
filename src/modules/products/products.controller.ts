@@ -9,6 +9,7 @@ import {
   Query,
   UploadedFile,
   UseInterceptors,
+  Put,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
@@ -145,6 +146,20 @@ export class ProductsController {
     possession: 'any',
   })
   update(@Param('id') id: string, @Body() updateProductDto: UpdateProductDto) {
+    return this.productsService.update(+id, updateProductDto);
+  }
+
+  @Put('products/:id')
+  @ApiBearerAuth()
+  @ApiOperation({
+    summary: 'Update a single product',
+  })
+  @UseRoles({
+    resource: 'product',
+    action: 'update',
+    possession: 'any',
+  })
+  updateProduct(@Param('id') id: string, @Body() updateProductDto: UpdateProductDto) {
     return this.productsService.update(+id, updateProductDto);
   }
 
