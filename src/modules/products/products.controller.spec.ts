@@ -2,7 +2,7 @@ import { NotFoundException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { Product } from '@prisma/client';
 import { Readable } from 'stream';
-import { PaginationResponseDto } from '../../shared/dto/dto/pagination-response.dto';
+import { PaginationResponseDto } from '../shared/dto/dto/pagination-response.dto';
 import { PrismaModule } from '../../database/prisma.module';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';

@@ -1,7 +1,7 @@
 import { Controller, Get, Post } from '@nestjs/common';
 import { OrdersService } from './orders.service';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
-import { CurrentUser } from '../../shared/decorators/current-user.decorator';
+import { CurrentUser } from '../shared/decorators/current-user.decorator';
 import { User } from '@prisma/client';
 import { UseRoles } from 'nest-access-control';
 

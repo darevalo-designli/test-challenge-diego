@@ -4,7 +4,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { Product } from '@prisma/client';
-import { PaginationResponseDto } from '../../shared/dto/dto/pagination-response.dto';
+import { PaginationResponseDto } from '../shared/dto/dto/pagination-response.dto';
 import { PrismaService } from '../../database/prisma.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { SearchProductQueryDto } from './dto/search-product-query.dto';

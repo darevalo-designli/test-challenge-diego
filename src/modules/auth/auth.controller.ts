@@ -2,7 +2,7 @@ import { Body, Controller, Post } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { SignUpDto } from './dto/sign-up.dto';
-import { ExposedEndpoint } from '../../shared/decorators/exposed-endpoint.decorator';
+import { ExposedEndpoint } from '../shared/decorators/exposed-endpoint.decorator';
 import { SignInEmailDto } from './dto/sign-in-email.dto';
 
 @ApiTags('Authentication')

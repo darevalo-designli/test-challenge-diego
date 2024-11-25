@@ -7,7 +7,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { JwtAuthGuard } from './modules/auth/guards/jwt-auth.guard';
-import { PasswordInterceptor } from './shared/interceptors/password-interceptor.interceptor';
+import { PasswordInterceptor } from './modules/shared/interceptors/password-interceptor.interceptor';
 import { CartModule } from './modules/cart/cart.module';
 import { OrdersModule } from './modules/orders/orders.module';
 

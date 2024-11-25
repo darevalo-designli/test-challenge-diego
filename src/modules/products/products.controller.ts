@@ -21,7 +21,7 @@ import {
   ApiTags,
 } from '@nestjs/swagger';
 import { UseRoles } from 'nest-access-control';
-import { ExposedEndpoint } from '../../shared/decorators/exposed-endpoint.decorator';
+import { ExposedEndpoint } from '../shared/decorators/exposed-endpoint.decorator';
 import { SearchProductQueryDto } from './dto/search-product-query.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 
