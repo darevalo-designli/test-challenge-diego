@@ -36,7 +36,6 @@ To interact with the API, use the following demo credentials:
   "password": "managerPassword"
 }
 ```
-[See Swagger documentation here](https://tiny-store-db1c4e9bf4f1.herokuapp.com/api-docs)
 
 
 ## 🔐 Environment Variables
@@ -53,7 +52,7 @@ To run this project, you will need to add the following environment variables to
 ### 1. Clone the project
 
 ```bash
-  git clone URL
+  git clone https://github.com/darevalo-designli/test-challenge-diego.git
 ```
 
 ### 2. Go to the project directory
