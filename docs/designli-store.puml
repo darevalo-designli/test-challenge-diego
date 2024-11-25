@@ -1,0 +1,77 @@
+@startuml
+' Entities
+entity User {
+  + id: Int [PK]
+  + email: String [Unique]
+  + firstName: String
+  + lastName: String
+  + password: String
+  + createdAt: DateTime
+  + updatedAt: DateTime
+}
+
+entity Product {
+  + id: Int [PK]
+  + name: String
+  + description: String
+  + category: String
+  + price: Float
+  + stock: Int
+  + isVisible: Boolean
+  + createdAt: DateTime
+  + updatedAt: DateTime
+}
+
+entity ProductImage {
+  + id: Int [PK]
+  + url: String
+  + productId: Int [FK]
+}
+
+
+
+entity Cart {
+  + id: Int [PK]
+  + userId: Int [FK, Unique]
+  + createdAt: DateTime
+  + updatedAt: DateTime
+}
+
+entity CartItem {
+  + id: Int [PK]
+  + cartId: Int [FK]
+  + productId: Int [FK]
+  + quantity: Int
+}
+
+entity Order {
+  + id: Int [PK]
+  + userId: Int [FK]
+  + total: Float
+  + createdAt: DateTime
+  + updatedAt: DateTime
+}
+
+entity OrderItem {
+  + id: Int [PK]
+  + orderId: Int [FK]
+  + productId: Int [FK]
+  + price: Float
+  + quantity: Int
+}
+
+' Relationships
+User "1" -- "0..1" Cart : "owns"
+User "1" -- "0..n" Order : "places"
+
+Product "1" -- "0..n" ProductImage : "has"
+Product "1" -- "0..n" CartItem : "is in"
+Product "1" -- "0..n" OrderItem : "is part of"
+
+Cart "1" -- "0..n" CartItem : "contains"
+CartItem "1" -- "1" Product : "references"
+
+Order "1" -- "0..n" OrderItem : "includes"
+OrderItem "1" -- "1" Product : "references"
+
+@enduml
