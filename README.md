@@ -15,6 +15,8 @@ for tracking products, inventory levels, and orders.
 TODO: Draw.io Link with an Entity-Relationship Diagram
 
 [Scenario 2 Solution](https://gist.github.com/darevalo-designli/05c9568c9e0eba12a02318abcd3edc0b)
+![image](https://github.com/user-attachments/assets/d1cd2f7c-1842-4495-916f-8ccd0244ac2b)
+
 
 ## 🎮 Live Demo
 
