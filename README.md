@@ -12,11 +12,12 @@ note: You are tasked with designing the architecture of a simple Inventory
 Management System following DDD principles. The system will be responsible
 for tracking products, inventory levels, and orders.
 
-TODO: Draw.io Link with an Entity-Relationship Diagram
+ Draw Link with an Entity-Relationship Diagram
 
 [Scenario 2 Solution](https://gist.github.com/darevalo-designli/05c9568c9e0eba12a02318abcd3edc0b)
 
 ## 🎮 Live Demo
+
 
 To interact with the API, use the following demo credentials:
 
