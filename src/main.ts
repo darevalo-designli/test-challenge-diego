@@ -29,8 +29,8 @@ async function bootstrap() {
   );
   // Swagger setup
   const config = new DocumentBuilder()
-    .setTitle('Tiny Store REST API')
-    .setDescription('RAVN Challenge v2')
+    .setTitle('Designli Store REST API')
+    .setDescription('Designli Challenge')
     .setVersion('1.0')
     .setContact(
       'Diego Arevalo',
