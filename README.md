@@ -27,7 +27,7 @@ To interact with the API, use the following demo credentials:
 - **Client Account:**
   ```json
   {
-    "email": "diego@example.com",
+    "email": "diego@example1.com",
     "password": "clientPassword"
   }
 
@@ -36,7 +36,7 @@ To interact with the API, use the following demo credentials:
 
 ```json
 {
-  "email": "test@example.com",
+  "email": "test1@example.com",
   "password": "managerPassword"
 }
 ```
